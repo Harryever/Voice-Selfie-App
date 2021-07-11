@@ -8,10 +8,10 @@ function start() {
 recognition.onresult = function (event) {
   console.log(event);
   var Content = event.results[0][0].transcript;
-  console.log(Content);
   document.getElementById("textbox").innerHTML = Content;
+  console.log(Content);
 
-  if (Content == "Take my selfie") {
+  if (Content == "take my selfie") {
     console.log("Taking selfie in 5 seconds");
     speak();
   }
